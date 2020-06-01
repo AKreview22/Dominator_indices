@@ -1,11 +1,23 @@
 package Algorithm;
+import java.util.*;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        int[] intArray = new int[]{ 1 , 2 , 3 , 4 , 2 };
 
-        System.out.println("The indexes of dominator is : ");
+        Scanner myInput = new Scanner( System.in );
+        System.out.println("Enter the size of your array");
+        int size = myInput.nextInt();
+        int[] intArray = new int[size];
+
+        System.out.println("Enter the elements of your array");
+        for ( int i = 0 ; i < size ; i++ )
+        {
+            intArray[i]=myInput.nextInt();
+        }
+
+        System.out.println("The indices of dominator is : ");
         dominator.printDominatorIndex(intArray);
         }
     }
